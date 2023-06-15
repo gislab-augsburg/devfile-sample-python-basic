@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return "Hello World, this is me, check it out now! The Funk Soul Brother. Check Commit"
+    return "Hello World, this is me, check it out now! The Funk Soul Brother. Check Commit, Check connection"
 
     #establishing the connection
     conn = psycopg2.connect(
@@ -20,7 +20,9 @@ def hello():
 
     # Fetch a single row using fetchone() method.
     data = cursor.fetchone()
-    print("fetched: ",data)
+    
+    return "fetched: "
+    return data
 
     #Closing the connection
     conn.close()
