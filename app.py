@@ -7,6 +7,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     return "Hello World, this is me, check it out now! The Funk Soul Brother. Check Commit, Check connection"
+    return "Hello again"
 
     #establishing the connection
     conn = psycopg2.connect(
@@ -14,6 +15,8 @@ def hello():
     )
     #Creating a cursor object using the cursor() method
     cursor = conn.cursor()
+    
+    return "Hello a third time"
 
     #Executing an MYSQL function using the execute() method
     cursor.execute("SELECT schemaname FROM pg_catalog.pg_tables WHERE tablename = 'pg_statistic';")
