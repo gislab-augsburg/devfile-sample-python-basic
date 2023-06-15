@@ -16,7 +16,7 @@ def hello():
     cursor = conn.cursor()
 
     #Executing an MYSQL function using the execute() method
-    cursor.execute("SELECT schemaname FROM pg_catalog.pg_tables WHERE tablename = 'pg_statistic'";)
+    cursor.execute("SELECT schemaname FROM pg_catalog.pg_tables WHERE tablename = 'pg_statistic';")
 
     # Fetch a single row using fetchone() method.
     data = cursor.fetchone()
